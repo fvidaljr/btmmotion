@@ -75,17 +75,17 @@
 
 #formas li:nth-of-type(2) {
     left: calc(50% - var(--a) * 2 - var(--d) * 1.5);
-    top: calc(var(--h) * 0.8);
+    top: calc(var(--h) * 0.5);
 }
 
 #formas li:nth-of-type(3) {
     left: calc(50% - var(--a) - var(--d) * 0.5);
-    top: calc(var(--h) * 1.5);
+    top: calc(var(--h) * 1);
 }
 
 #formas li:nth-of-type(4) {
     left: calc(50% + var(--d) * 0.5);
-    top: calc(var(--h) * 0.8);
+    top: calc(var(--h) * 0.5);
 }
 
 
