@@ -246,6 +246,12 @@ figure {
     color: white;
 }
 
+footer hr {
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+}
+
 .event-list {
     display: flex;
     flex-wrap: wrap;
