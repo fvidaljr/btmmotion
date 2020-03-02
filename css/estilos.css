@@ -250,6 +250,10 @@ figure {
     color: white;
 }
 
+.footer-copyright p {
+    text-align: center;
+}
+
 footer hr {
     margin-top: 0rem;
     margin-bottom: 0.5rem;
