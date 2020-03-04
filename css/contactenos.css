@@ -1,0 +1,17 @@
+.formulario h1 {
+    color: black;
+}
+
+.btn-enviar {
+    color: #6f9940;
+    background: transparent;
+    border: 2px solid #6f9940;
+    border-radius: 6px;
+    padding: 8px 25px;
+}
+
+.btn-enviar:hover {
+    background-color: #6f9940;
+    color:white;
+}
+
