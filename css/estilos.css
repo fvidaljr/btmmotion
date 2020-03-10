@@ -229,6 +229,11 @@ figure {
     width: 100%;
 }
 
+#pagIndex {
+    /* padding-top: 2rem; */
+    padding-bottom: 5.5rem;
+}
+
 .contacto {
     color: white;
 }
@@ -317,7 +322,7 @@ footer hr {
 
 footer i {
     margin: 0 16px;
-    font-size: 45pt;
+    font-size: 30pt;
     color: white;
 }
 
