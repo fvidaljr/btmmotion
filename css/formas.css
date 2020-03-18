@@ -108,7 +108,7 @@
   */
 
 #formas ul {
-    animation: r 4s forwards;
+    /* animation: r 4s forwards; */
 }
 
 @keyframes r {
@@ -121,12 +121,12 @@
 }
 
 #formas li {
-    animation: ir 4s forwards;
+    animation: ir 3s forwards;
 }
 
 @keyframes ir {
     from {
-        transform: rotate(-360deg);
+        transform: rotate(180deg);
     }
     to {
         transform: rotate(0);
