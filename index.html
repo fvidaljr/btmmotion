@@ -80,27 +80,18 @@
 
     <div class="container mt-5" id="pagIndex">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-5">
                 <h1 class="text-body">ESLOGAN</h1>
                 <br>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe possimus perferendis neque blanditiis voluptate quibusdam, aliquid quisquam sit, sapiente ipsa eum fuga. Rem sit similique veritatis in delectus, aperiam voluptates.</p>
                 <button type="button" class="btn btn-enviar btn-lg">MÁS</button>
             </div>
-            <div class="col-lg-8 pt-3" id="formas">
-                <ul>
-                    <li>
-                        <a href="./proyectos.html"><img src="./imagenes/ImgTipo1.png" /></a>
-                    </li>
-                    <li>
-                        <a href="./proyectos.html"><img src="./imagenes/ImgTipo2.png" /></a>
-                    </li>
-                    <li>
-                        <a href="./proyectos.html"><img src="./imagenes/ImgTipo3.png" /></a>
-                    </li>
-                    <li>
-                        <a href="./proyectos.html"><img src="./imagenes/ImgTipo4.png" /></a>
-                    </li>
-                </ul>
+
+            <div class="col-lg-6 offset-lg-1 pt-3" id="categorias">
+                <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 row-cols-sm-4 row-cols-xs-1" id="categoriasFirstChild">
+                    <!-- aquí contenido cargado mediante js -->
+                </div>
+
             </div>
 
         </div>
@@ -176,36 +167,20 @@
 
     </footer>
     <!-- Footer -->
-    <script>
-        // console.log('hola mundo! es mi primera linea en JS');
-        const ipad = window.matchMedia('screen and (max-width:767px)');
-        const menu = document.querySelector('.menu');
-        // console.log(menu);
-        const burgerButton = document.querySelector('#burger-menu');
-        // console.log(burgerButton);
-        ipad.addListener(validation);
 
-        function validation(event) {
-            if (event.matches) {
-                burgerButton.addEventListener('click', hideShow);
-            } else {
-                burgerButton.removeEventListener('click', hideShow);
-            }
-        }
-        validation(ipad);
-
-        function hideShow() {
-            if (menu.classList.contains('is-active')) {
-                menu.classList.remove('is-active');
-            } else {
-                menu.classList.add('is-active');
-            }
-        }
-    </script>
     <!-- Necesarios para bootstrap -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+
+
+    <!-- para usar ajax de jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
+
+    <!-- scripts para esta pagina -->
+    <script src="./js/index.js"></script>
+
+    
 </body>
 
 </html>
