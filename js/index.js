@@ -20,10 +20,8 @@ function crearTarjeta(src, href){
 }
 
 
-async function cargarCategorias(){
-    
-
-    await $.ajax({
+function cargarCategorias(){    
+    $.ajax({
         // producción
         url: 'https://btmapi.herokuapp.com/api/v1/categorias',
         // desarrollo
