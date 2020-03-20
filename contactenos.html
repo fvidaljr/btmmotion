@@ -77,43 +77,43 @@
                 <div class="col-lg-6 col-sm-12 mt-5 formulario">
 
                     <div class="form-group row mt-4">
-                        <label class="col-sm-2 col-form-label">NOMBRE</label>
+                        <label class="col-sm-2 col-form-label">NOMBRES</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="nombresInput">
                         </div>
                     </div>
 
                     <div class="form-group row mt-2">
                         <label class="col-sm-2 col-form-label">APELLIDOS</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="apellidosInput">
                         </div>
                     </div>
 
                     <div class="form-group row mt-2">
                         <label class="col-sm-2 col-form-label">CORREO</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control">
+                            <input type="email" class="form-control" id="emailInput" required>
                         </div>
                     </div>
 
                     <div class="form-group row mt-2">
                         <label class="col-sm-2 col-form-label">ASUNTO</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="asuntoInput" required>
                         </div>
                     </div>
 
                     <div class="form-group row mt-2">
                         <label class="col-sm-2 col-form-label">MENSAJE</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" rows="8"></textarea>
+                            <textarea class="form-control" rows="8" id="mensajeInput" required></textarea>
                         </div>
                     </div>
                     
                 </div>
                 <div class="mx-auto">
-                    <button class="mt-3 btn-enviar">ENVIAR</button>
+                    <button class="mt-3 btn-enviar" type="button" id="btnEnviar">ENVIAR</button>
                 </div>
             </div>
         </form>
@@ -195,6 +195,7 @@
 
     <!-- scripts para esta pagina -->
     <script src="./js/footer.js"></script>
+    <script src="./js/contactenos.js"></script>
 </body>
 
 </html>
