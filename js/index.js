@@ -20,6 +20,35 @@ function crearTarjeta(src, href){
 }
 
 
+function crearTarjeta2(src, href){
+
+    var div1 = document.createElement('div');
+    div1.className = "col-lg-6 col-md-6 col-sm-12";
+
+    var div2 = document.createElement('div');
+    div2.className = "formas py-3";
+
+    var ul = document.createElement('ul')
+
+    var li = document.createElement('li')
+
+    var a = document.createElement("a");
+    a.setAttribute("href", href);
+
+    var img = document.createElement('img')
+    img.src = src;
+
+    a.appendChild(img)
+    li.appendChild(a);
+    ul.appendChild(li);
+    div2.appendChild(ul);
+    div1.appendChild(div2)
+
+    return div1;
+}
+
+
+
 function cargarCategorias(){    
     $.ajax({
         // producción
@@ -32,7 +61,7 @@ function cargarCategorias(){
             for (var i = 0; i < resultado.length; i++) {
                 src = resultado[i]["sourceimg"];
                 href="./proyectos.html#" + resultado[i]["tag"];
-                let div = crearTarjeta(src, href)
+                let div = crearTarjeta2(src, href)
                 child1.appendChild(div)
             }
         },
