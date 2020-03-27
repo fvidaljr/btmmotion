@@ -48,7 +48,6 @@ function cargarMensaje(nombres, apellidos, email, asunto, mensaje){
             $('#emailContactInput').val('') ;
             $('#asuntoContactInput').val('') ;
             $('#mensajeContactInput').val('') ;
-            console.log(resultado);
         },
         error: function(errores) {
             alert("Falla en el servidor, intente más tarde");
