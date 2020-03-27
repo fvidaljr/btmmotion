@@ -1,8 +1,16 @@
+/* paleta de colores */
+/* 
+#015249 inicial
+#5F87C1
+#B8D6F2
+#9DC1ED
+#AECC7D
+#8DD16D 
+#D4DB46
+*/
+
 .header {
-    /* background-color: #77C9D4; */
-    /* background-color: #57bc90; */
-    /* background-color: #A5a5af; */
-    background-color: #015249;
+    background-color: #5F87C1;
     color: white;
     display: flex;
     height: 70px;
@@ -38,7 +46,7 @@
 }
 
 #mainNav {
-    background-color: #015249;
+    background-color: #5F87C1;
 }
 
 #mainNav button {
@@ -51,12 +59,12 @@
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-body {
+/* body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: normal;
-    /*font-style: italic;*/
+    font-style: italic;
     margin: 0%;
-}
+} */
 
 h1,
 h2,
@@ -64,14 +72,14 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Fjalla One', serif;
+    font-family:  'gill sans MT';
 }
 
 h1 {
     font-size: 40px;
+    font-weight: bold;
     line-height: 1.5em;
     letter-spacing: -0.2px;
-    color: white;
     margin: 0;
     /*margin: 100px 150px 70px 30px;*/
     /*text-transform: uppercase;*/
@@ -93,6 +101,8 @@ h2 {
 
 p {
     text-align: justify;
+    font-family:  'goudy old style';
+    font-size: 18px;
 }
 
 
@@ -111,6 +121,7 @@ figure {
 .header a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
 }
 
 .header ol {
@@ -145,6 +156,10 @@ figure {
 
 .footer-copyright p {
     text-align: center;
+}
+
+footer{
+    background-color:#5F87C1;
 }
 
 footer hr {
