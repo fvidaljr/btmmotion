@@ -43,11 +43,11 @@ function cargarMensaje(nombres, apellidos, email, asunto, mensaje){
         },
         success: function(resultado) {
             alert( "Mensaje enviado correctamente!");
-            $('#nombresInput').val('') ;
-            $('#apellidosInput').val('') ;
-            $('#emailInput').val('') ;
-            $('#asuntoInput').val('') ;
-            $('#mensajeInput').val('') ;
+            $('#nombresContactInput').val('') ;
+            $('#apellidosContactInput').val('') ;
+            $('#emailContactInput').val('') ;
+            $('#asuntoContactInput').val('') ;
+            $('#mensajeContactInput').val('') ;
             console.log(resultado);
         },
         error: function(errores) {
@@ -58,11 +58,11 @@ function cargarMensaje(nombres, apellidos, email, asunto, mensaje){
 }
 
 function comentar(){
-    var nombres = $("#nombresInput").val().toUpperCase();
-    var apellidos = $("#apellidosInput").val().toUpperCase();
-    var email = $("#emailInput").val().toLowerCase();
-    var asunto = $("#asuntoInput").val();
-    var mensaje = $("#mensajeInput").val();
+    var nombres = $("#nombresContactInput").val().toUpperCase();
+    var apellidos = $("#apellidosContactInput").val().toUpperCase();
+    var email = $("#emailContactInput").val().toLowerCase();
+    var asunto = $("#asuntoContactInput").val();
+    var mensaje = $("#mensajeContactInput").val();
 
     if (validarEmail(email) && validarAsunto(asunto) && validarMensaje(mensaje)) {
         cargarMensaje(nombres, apellidos, email, asunto, mensaje);
