@@ -1,4 +1,4 @@
-function cargarTitulo(){
+function cargarInfo(){
     var currentUrl = document.URL;
     var urlPart = currentUrl.split('#')[1];
     $.ajax({
@@ -8,47 +8,64 @@ function cargarTitulo(){
         // url: 'http://127.0.0.1:3000/api/v1/categorias/tag/'+urlPart,
 
         success: function(resultado) {
-            temp = resultado[0].nombre;   
+            nombreCategoria = resultado[0].nombre;
+            descripcion = resultado[0].descripcion;
+            idcateg = resultado[0].idcateg;
+
             h1Categ = document.getElementById("categoria")
-            h1Categ.innerText = temp;
+            p = document.getElementById('descripCateg');
+            nodoAtributo = document.createAttribute("idcateg");
+            
 
-            cargarDescripcion(temp);
-        },
-        error: function(errores) {
-            console.log("errores");
-            console.log(errores);
-        }
-    });
-}
+            h1Categ.innerText = nombreCategoria;
+            p.innerText = descripcion
+            nodoAtributo.value = idcateg
+            h1Categ.setAttributeNode(nodoAtributo);
+
+            $.ajax({
+                // producción
+                url: 'https://btmapi.herokuapp.com/api/v1/proyectos/idcateg/'+idcateg,
+                // desarrollo
+                // url: 'http://127.0.0.1:3000/api/v1/proyectos/idcateg/'+idcateg,
+                success:function(resultado2){
+
+                    elemento = document.querySelector("#formas ul");
+
+                    for (let i = 0; i < resultado2.length; i++) {
+                        const sourceimg = resultado2[i]["sourceimg"];
+                        const idproy = resultado2[i]["idproy"];
+
+                        var li = document.createElement('li');
+
+                        var a = document.createElement('a');
+                        a.setAttribute("href", "./infoProyecto.html#"+idproy);
+
+                        var img = document.createElement('img');
+                        img.src = sourceimg;                        
+
+                        a.appendChild(img);
+                        li.appendChild(a)
+
+                        elemento.appendChild(li);
+                    }
 
 
 
-function cargarDescripcion(titulo) {
-    $.ajax({
-        // producción
-        url: 'https://btmapi.herokuapp.com/api/v1/categorias/',
-        // desarrollo
-        // url: 'http://127.0.0.1:3000/api/v1/categorias/',
 
-        success: function(resultado) {
-            var p = document.getElementById('descripCateg');
-            for (var i = 0; i < resultado.length; i++) {
-                let nombre = resultado[i]['nombre'];
-                let descripcion = resultado[i]['descripcion'];
-
-                if (nombre == titulo) {
-                    p.innerText = descripcion
                 }
-            }
+            })
+
         },
         error: function(errores) {
             console.log("errores");
             console.log(errores);
         }
     });
-
 }
+
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
-    cargarTitulo();
+    cargarInfo();
 })
