@@ -3,9 +3,9 @@ function cargarInfo(){
     var id = currentUrl.split('#')[1];
     $.ajax({
         // producción
-        // url: 'https://btmapi.herokuapp.com/api/v1/proyectos/id/'+id,
+        url: 'https://btmapi.herokuapp.com/api/v1/proyectos/id/'+id,
         // desarrollo
-        url: 'http://127.0.0.1:3000/api/v1/proyectos/id/'+id,
+        // url: 'http://127.0.0.1:3000/api/v1/proyectos/id/'+id,
 
         success: function(resultado) {
 
@@ -33,9 +33,9 @@ function cargarImgs(){
     var id = currentUrl.split('#')[1];
     $.ajax({
         // producción
-        // url: 'https://btmapi.herokuapp.com/api/v1/imagenes/idproy/'+id,
+        url: 'https://btmapi.herokuapp.com/api/v1/imagenes/idproy/'+id,
         // desarrollo
-        url: 'http://127.0.0.1:3000/api/v1/imagenes/idproy/'+id,
+        // url: 'http://127.0.0.1:3000/api/v1/imagenes/idproy/'+id,
 
         success: function(resultado) {
 
@@ -141,9 +141,9 @@ function validarNombres(nombres) {
 function cargarComentario(comentario, nombres, email, idproy){
     $.ajax({
         // producción
-        // url: 'https://btmapi.herokuapp.com/api/v1/comentarios',
+        url: 'https://btmapi.herokuapp.com/api/v1/comentarios',
         // desarrollo
-        url: 'http://127.0.0.1:3000/api/v1/comentarios',
+        // url: 'http://127.0.0.1:3000/api/v1/comentarios',
         type: "POST",        
         data: {
             emailInput:email,
