@@ -230,3 +230,11 @@ footer i {
     color: white;
     /* font-size: 50px; */
 }
+
+.fa-whatsapp-square{
+    color: green;
+    font-size: 50pt;
+    position: absolute;
+    bottom: 500pt;
+    left: 15pt;
+}
