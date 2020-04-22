@@ -84,7 +84,7 @@ function cargarComentarios(){
                 comentario  = resultado[i]["comentario"];
 
                 div = document.createElement("div");
-                div.setAttribute("class","alert alert-info");
+                div.setAttribute("class","alert alert-info comentario");
                 div.setAttribute("role","alert");
 
                 h4 = document.createElement("h4");
