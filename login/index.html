@@ -39,14 +39,14 @@
 					
 					
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100" type="text" name="email">
+						<input class="input100" type="text" name="email" id="emailInput">
 						<span class="focus-input100"></span>
-						<span class="label-input100">Usuario</span>
+						<span class="label-input100">Email</span>
 					</div>
 					
 					
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
-						<input class="input100" type="password" name="pass">
+						<input class="input100" type="password" name="pass" id="passInput">
 						<span class="focus-input100"></span>
 						<span class="label-input100">Contraseña</span>
 					</div>
@@ -68,7 +68,7 @@
 			
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn" type="button" id="btnIngresar">
 							Iniciar Sesión
 						</button>
 					</div>
@@ -80,7 +80,7 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn" id="btnRegistrar" type="button">
 							Regístrate 	
 						</button>
 					</div>
@@ -111,7 +111,9 @@
 <!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<!-- <script src="js/main.js"></script> -->
+
+	<script src="js/login.js"></script>
 
 </body>
 </html>
