@@ -139,7 +139,7 @@ function validarNombres(nombres) {
 }
 
 
-function cargarComentario(comentario, nombres, email, idproy){
+function cargarComentario(comentario, nombres, apellidos, email, idproy){
     $.ajax({
         // producción
         url: 'https://btmapi.herokuapp.com/api/v1/comentarios',
