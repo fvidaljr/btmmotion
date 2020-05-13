@@ -81,6 +81,7 @@ function cargarComentarios(){
             for (let i = 0; i < resultado.length; i++) {
 
                 nombres  = resultado[i]["nombres"];
+                apellidos  = resultado[i]["apellidos"];
                 comentario  = resultado[i]["comentario"];
 
                 div = document.createElement("div");
@@ -89,7 +90,7 @@ function cargarComentarios(){
 
                 h4 = document.createElement("h4");
                 h4.setAttribute("class","alert-heading");
-                h4.innerText = nombres;
+                h4.innerText = nombres,' ',apellidos;
 
                 hr = document.createElement("hr");
 
@@ -148,6 +149,7 @@ function cargarComentario(comentario, nombres, email, idproy){
         data: {
             emailInput:email,
             nombresInput:nombres,
+            apellidosInput:apellidos,
             comentarioInput:comentario,
             idproyInput:idproy
         },
@@ -155,6 +157,7 @@ function cargarComentario(comentario, nombres, email, idproy){
             alert( "Comentario enviado correctamente!");
             $('#comentarioComInput').val('') ;
             $('#nombresComInput').val('') ;
+            $('#apellidosComInput').val('') ;
             $('#emailComInput').val('') ;
         },
         error: function(errores) {
@@ -168,14 +171,15 @@ function cargarComentario(comentario, nombres, email, idproy){
 function comentar(){
     var comentario = $("#comentarioComInput").val();
     var nombres = $("#nombresComInput").val();
+    var apellidos = $("#apellidosComInput").val();
     var email = $("#emailComInput").val().toLowerCase();
 
     var currentUrl = document.URL;
     var idproy = currentUrl.split('#')[1];
     
 
-    if (validarEmail(email) && validarNombres(nombres) && validarComentario(comentario)) {
-        cargarComentario(comentario, nombres, email, idproy);
+    if (validarEmail(email) && validarNombres(nombres) && validarNombres(apellidos) && validarComentario(comentario)) {
+        cargarComentario(comentario, nombres, apellidos, email, idproy);
     }
     
 }
