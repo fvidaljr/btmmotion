@@ -82,6 +82,7 @@ function cargarComentarios(){
 
                 nombres  = resultado[i]["nombres"];
                 apellidos  = resultado[i]["apellidos"];
+                const nombreComp = nombres+' '+apellidos
                 comentario  = resultado[i]["comentario"];
 
                 div = document.createElement("div");
@@ -89,8 +90,8 @@ function cargarComentarios(){
                 div.setAttribute("role","alert");
 
                 h4 = document.createElement("h4");
-                h4.setAttribute("class","alert-heading");
-                h4.innerText = nombres,' ',apellidos;
+                h4.setAttribute("class","alert-heading");                
+                h4.innerText = nombreComp;
 
                 hr = document.createElement("hr");
 
